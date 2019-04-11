@@ -1,0 +1,72 @@
+{
+  "name": "react-boundary",
+  "version": "1.0.0",
+  "description": "Error boundaries, the hooky way.",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prebuild": "npm run lint && npm run test && npm run clean",
+    "build": "rollup -c",
+    "test": "jest",
+    "lint": "tslint \"src/**/*.ts?(x)\"",
+    "clean": "rimraf lib/",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houfio/react-boundary.git"
+  },
+  "keywords": [
+    "react",
+    "error-boundary",
+    "hoc"
+  ],
+  "files": [
+    "src/",
+    "lib/"
+  ],
+  "author": "houfio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/houfio/react-boundary/issues"
+  },
+  "homepage": "https://github.com/houfio/react-boundary#readme",
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.13",
+    "jest": "^24.7.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-testing-library": "^6.1.2",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.10.0",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-filesize": "^6.0.1",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.4.3"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "react-testing-library/cleanup-after-each.js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/tests/**/?(*.)test.ts?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}

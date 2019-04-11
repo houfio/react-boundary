@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<DocumentFragment>
+  <span>
+    Everything is fine
+  </span>
+</DocumentFragment>
+`;
+
+exports[`renders the errored component 1`] = `
+<DocumentFragment>
+  <span>
+    Oh no! Something happened: CRASHED!
+    in Unknown (created by Boundary(Component))
+    in Boundary(Component)
+  </span>
+</DocumentFragment>
+`;
